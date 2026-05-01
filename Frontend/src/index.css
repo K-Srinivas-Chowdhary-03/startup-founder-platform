@@ -144,3 +144,12 @@ body {
     letter-spacing: -0.03em;
 }
 
+/* Hide Vercel tooling in production */
+vercel-live-feedback, 
+#vercel-toolbar, 
+.vercel-toolbar {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}

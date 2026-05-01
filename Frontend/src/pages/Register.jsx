@@ -42,15 +42,18 @@ const Register = () => {
         <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh' }}>
             <Card className="glass-card p-4 shadow-lg border-0" style={{ maxWidth: '450px', width: '100%' }}>
                 <Card.Body>
-                    <h2 className="text-center fw-bold mb-4 d-flex align-items-center justify-content-center">
-                        Join 
-                        <img 
-                            src="https://img.freepik.com/premium-vector/cff-logo-cff-letter-cff-letter-logo-design-initials-cff-logo-linked-with-circle-uppercase-monogram-logo-cff-typography-technology-business-real-estate-brand_229120-54178.jpg" 
-                            alt="Logo" 
-                            style={{ width: '35px', height: '35px', margin: '0 10px', borderRadius: '50%' }} 
-                        />
-                        <span className="brand-font" style={{ color: '#3b82f6' }}>Co-Founder</span> <span className="brand-font" style={{ color: '#ef4444' }}>Finder</span>
-                    </h2>
+                    <div className="text-center mb-4 d-flex flex-column align-items-center justify-content-center">
+                        <h4 className="fw-bold text-muted mb-2">Join</h4>
+                        <div className="d-flex align-items-center justify-content-center brand-font" style={{ fontSize: '1.8rem', whiteSpace: 'nowrap' }}>
+                            <img 
+                                src="https://img.freepik.com/premium-vector/cff-logo-cff-letter-cff-letter-logo-design-initials-cff-logo-linked-with-circle-uppercase-monogram-logo-cff-typography-technology-business-real-estate-brand_229120-54178.jpg" 
+                                alt="Logo" 
+                                style={{ width: '35px', height: '35px', marginRight: '10px', borderRadius: '50%' }} 
+                            />
+                            <span style={{ color: '#3b82f6' }}>Co-Founder</span>
+                            <span className="ms-1" style={{ color: '#ef4444' }}>Finder</span>
+                        </div>
+                    </div>
                     <Form onSubmit={submitHandler}>
                         <Form.Group className="mb-3" controlId="name">
                             <Form.Label>Full Name</Form.Label>

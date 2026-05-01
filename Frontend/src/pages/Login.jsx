@@ -42,7 +42,7 @@ const Login = () => {
         <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh' }}>
             <Card className="glass-card p-4 shadow-lg border-0" style={{ maxWidth: '450px', width: '100%' }}>
                 <Card.Body>
-                    <div className="text-center mb-3 brand-font d-flex align-items-center justify-content-center" style={{ fontSize: '1.7rem' }}>
+                    <div className="text-center mb-3 brand-font d-flex align-items-center justify-content-center" style={{ fontSize: '1.7rem', whiteSpace: 'nowrap', width: '100%' }}>
                         <img 
                             src="https://img.freepik.com/premium-vector/cff-logo-cff-letter-cff-letter-logo-design-initials-cff-logo-linked-with-circle-uppercase-monogram-logo-cff-typography-technology-business-real-estate-brand_229120-54178.jpg" 
                             alt="Logo" 
