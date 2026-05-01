@@ -162,7 +162,7 @@ const InnovationCard = ({ innovation, user, handleJoinRequest, handleDelete }) =
 };
 
 const InnovationFeed = () => {
-    const user = JSON.parse(localStorage.getItem('userInfo'));
+    const user = JSON.parse(sessionStorage.getItem('userInfo'));
     const [innovations, setInnovations] = useState([]);
     const [loading, setLoading] = useState(true);
     const [showSuccess, setShowSuccess] = useState(false);

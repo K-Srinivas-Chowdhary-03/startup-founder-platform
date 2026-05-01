@@ -14,7 +14,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const { data } = await axios.post('/api/auth/login', { email, password });
-            localStorage.setItem('userInfo', JSON.stringify(data));
+            sessionStorage.setItem('userInfo', JSON.stringify(data));
             window.dispatchEvent(new Event('authChange'));
             
             setModalConfig({

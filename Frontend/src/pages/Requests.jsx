@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Requests = () => {
-    const user = JSON.parse(localStorage.getItem('userInfo'));
+    const user = JSON.parse(sessionStorage.getItem('userInfo'));
     const navigate = useNavigate();
     const [requests, setRequests] = useState([]);
     const [loading, setLoading] = useState(true);

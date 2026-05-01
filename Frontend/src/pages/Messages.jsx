@@ -6,7 +6,7 @@ import axios from 'axios';
 const Messages = () => {
     const { id: activeUserId } = useParams();
     const navigate = useNavigate();
-    const user = JSON.parse(localStorage.getItem('userInfo'));
+    const user = JSON.parse(sessionStorage.getItem('userInfo'));
     
     const [conversations, setConversations] = useState([]);
     const [messages, setMessages] = useState([]);

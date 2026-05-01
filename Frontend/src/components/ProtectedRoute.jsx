@@ -4,9 +4,9 @@ import { Navigate } from 'react-router-dom';
 const ProtectedRoute = ({ children }) => {
     let user = null;
     try {
-        user = JSON.parse(localStorage.getItem('userInfo'));
+        user = JSON.parse(sessionStorage.getItem('userInfo'));
     } catch (e) {
-        localStorage.removeItem('userInfo');
+        sessionStorage.removeItem('userInfo');
     }
     
     if (!user) {

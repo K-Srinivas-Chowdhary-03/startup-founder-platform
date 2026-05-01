@@ -71,7 +71,7 @@ const Home = () => {
     const [showDialog, setShowDialog] = useState(false);
     const [showHelpModal, setShowHelpModal] = useState(false);
 
-    const user = JSON.parse(localStorage.getItem('userInfo'));
+    const user = JSON.parse(sessionStorage.getItem('userInfo'));
     const getStartedRoute = user ? '/dashboard' : '/login';
 
     const handleChange = (e) => {

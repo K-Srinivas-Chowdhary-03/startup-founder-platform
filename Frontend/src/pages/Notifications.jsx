@@ -6,7 +6,7 @@ import axios from 'axios';
 const Notifications = () => {
     let initialUser = null;
     try {
-        initialUser = JSON.parse(localStorage.getItem('userInfo'));
+        initialUser = JSON.parse(sessionStorage.getItem('userInfo'));
     } catch(e) {}
     
     const user = initialUser;

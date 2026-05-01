@@ -7,9 +7,9 @@ const AppNavbar = () => {
     const navigate = useNavigate();
     let initialUser = null;
     try {
-        initialUser = JSON.parse(localStorage.getItem('userInfo'));
+        initialUser = JSON.parse(sessionStorage.getItem('userInfo'));
     } catch (e) {
-        localStorage.removeItem('userInfo');
+        sessionStorage.removeItem('userInfo');
     }
     const [user, setUser] = useState(initialUser);
     const [showLogoutWarning, setShowLogoutWarning] = useState(false);
@@ -26,7 +26,7 @@ const AppNavbar = () => {
     useEffect(() => {
         const handleAuthChange = () => {
             try {
-                setUser(JSON.parse(localStorage.getItem('userInfo')));
+                setUser(JSON.parse(sessionStorage.getItem('userInfo')));
             } catch(e) {
                 setUser(null);
             }
@@ -81,7 +81,7 @@ const AppNavbar = () => {
     };
 
     const confirmLogout = () => {
-        localStorage.removeItem('userInfo');
+        sessionStorage.removeItem('userInfo');
         window.dispatchEvent(new Event('authChange'));
         setShowLogoutWarning(false);
         setShowLogoutSuccess(true);

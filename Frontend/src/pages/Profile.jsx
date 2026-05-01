@@ -23,7 +23,7 @@ const Profile = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
 
-    const storedUserInfo = localStorage.getItem('userInfo');
+    const storedUserInfo = sessionStorage.getItem('userInfo');
     const userInfo = storedUserInfo ? JSON.parse(storedUserInfo) : null;
 
     useEffect(() => {
@@ -59,7 +59,7 @@ const Profile = () => {
                 // Clear local storage if 404 occurs on own profile, it might be a stale session
                 if (err.response?.status === 404) {
                     console.warn('Session user not found in DB, logging out...');
-                    // localStorage.removeItem('userInfo');
+                    // sessionStorage.removeItem('userInfo');
                     // navigate('/login');
                 }
             }
@@ -117,7 +117,7 @@ const Profile = () => {
             
             const { data } = await axios.put(`/api/auth/profile/${userInfo._id}`, dataToUpdate);
             
-            localStorage.setItem('userInfo', JSON.stringify({ 
+            sessionStorage.setItem('userInfo', JSON.stringify({ 
                 ...userInfo, 
                 name: data.name, 
                 role: data.role,
